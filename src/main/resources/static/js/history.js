@@ -20,7 +20,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
                     // Проход по каждому товару в корзине и создание карточки
                     cartItems.forEach(cartItem => {
-                        fetch(`http://localhost:8080/api/aids/${cartItem.aid_id}`)
+                        fetch(`http://localhost:8080/api/bakery/${cartItem.aid_id}`)
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error('Ошибка HTTP: ' + response.status);
@@ -34,7 +34,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
                                 // Заполнение информации о товаре
                                 aidCard.innerHTML = `
-                                <a href='aids?id=${aid.id}' class="product-image">
+                                <a href='bakery?id=${aid.id}' class="product-image">
                                     <img src="${aid.imageURL}" alt="Картинка">
                                 </a>
                                 <div class="product-info">
@@ -71,7 +71,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
                     // Проход по каждому товару в корзине и создание карточки
                     cartItems.forEach(cartItem => {
-                        fetch(`http://localhost:8080/api/aids/${cartItem.aid_id}`)
+                        fetch(`http://localhost:8080/api/bakery/${cartItem.aid_id}`)
                             .then(response => {
                                 if (!response.ok) {
                                     throw new Error('Ошибка HTTP: ' + response.status);
@@ -85,7 +85,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
                                 // Заполнение информации о товаре
                                 aidCard.innerHTML = `
-                                <a href='aids?id=${aid.id}' class="product-image">
+                                <a href='bakery?id=${aid.id}' class="product-image">
                                     <img src="${aid.imageURL}" alt="Картинка">
                                 </a>
                                 <div class="product-info">
@@ -136,7 +136,7 @@ const urlParams = new URLSearchParams(window.location.search);
         }
     // Функция для перехода к профилю выбранного пользователя
     function viewAid(aidId) {
-        window.location.href = `http://localhost:8080/api/aids/${aidId}`;
+        window.location.href = `http://localhost:8080/api/bakery/${aidId}`;
     }
     function applyFilter(){
             const search_val = document.getElementById("search_input").value;

@@ -15,7 +15,7 @@ function loadCart(jwt) {
 
             // Проход по каждому товару в корзине и создание карточки
             cartItems.forEach(cartItem => {
-                fetch(`http://localhost:8080/api/aids/${cartItem.aid_id}`)
+                fetch(`http://localhost:8080/api/bakery/${cartItem.aid_id}`)
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Ошибка HTTP: ' + response.status);
@@ -30,7 +30,7 @@ function loadCart(jwt) {
                         // Заполнение информации о товаре
                         const price = aid.discountPercent === 0 ? aid.price : (aid.price * (1 - (aid.discountPercent / 100)));
                         aidCard.innerHTML = `
-                            <a href="aids?id=${aid.id}" style="text-decoration: none; color: #000;">
+                            <a href="bakery?id=${aid.id}" style="text-decoration: none; color: #000;">
                                 <img src="${aid.imageURL}" alt="Картинка">
                                 <h3 class="medicine-name">${aid.name}</h3>
                             </a>

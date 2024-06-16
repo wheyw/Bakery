@@ -8,7 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
     // Функция для загрузки данных о пользователях
     function loadAids(page) {
-        const url = `http://localhost:8080/api/aids?page=${page}&size=${pageSize}&minP=${minP}&maxP=${maxP}&search=${_search}`;
+        const url = `http://localhost:8080/api/bakery?page=${page}&size=${pageSize}&minP=${minP}&maxP=${maxP}&search=${_search}`;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -28,7 +28,7 @@ const urlParams = new URLSearchParams(window.location.search);
                     // Заполнение информации о пользователе
                     if(aid.discountPercent==0)
                     aidCard.innerHTML = `
-                        <a href="aids?id=${aid.id}" style="text-decoration: none; color: #000;">
+                        <a href="bakery?id=${aid.id}" style="text-decoration: none; color: #000;">
                         <img src="${aid.imageURL}" alt="Картинка">
 				        <h3 class="medicine-name">${aid.name}</h3>
                         </a>
@@ -40,7 +40,7 @@ const urlParams = new URLSearchParams(window.location.search);
                     `;
                     else
                     aidCard.innerHTML = `
-                        <a href="aids?id=${aid.id}" style="text-decoration: none; color: #000;">
+                        <a href="bakery?id=${aid.id}" style="text-decoration: none; color: #000;">
                         <img src="${aid.imageURL}" alt="Картинка">
 				        <h3 class="medicine-name">${aid.name}</h3>
                         </a>
@@ -58,7 +58,7 @@ const urlParams = new URLSearchParams(window.location.search);
             .catch(error => console.error('Ошибка загрузки товаров:', error));
     }
     function loadSales() {
-        const url = `http://localhost:8080/api/aids/sale`;
+        const url = `http://localhost:8080/api/bakery/sale`;
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -76,7 +76,7 @@ const urlParams = new URLSearchParams(window.location.search);
                     aidCard.classList.add('medicine');
 
                     aidCard.innerHTML = `
-                        <a href="aids?id=${aid.id}" style="text-decoration: none; color: #000;">
+                        <a href="bakery?id=${aid.id}" style="text-decoration: none; color: #000;">
                         <img src="${aid.imageURL}" alt="Картинка">
 				        <h3 class="medicine-name">${aid.name}</h3>
                         </a>
@@ -107,7 +107,7 @@ const urlParams = new URLSearchParams(window.location.search);
     }
     function loadPages() {
         // Запрос на получение данных о пользователях
-        const url2 = `http://localhost:8080/api/aids/count?search=${_search}&minP=${minP}&maxP=${maxP}`;
+        const url2 = `http://localhost:8080/api/bakery/count?search=${_search}&minP=${minP}&maxP=${maxP}`;
         fetch(url2)
         .then(response => response.json())
         .then(data => {
@@ -134,7 +134,7 @@ const urlParams = new URLSearchParams(window.location.search);
         }
     // Функция для перехода к профилю выбранного пользователя
     function viewAid(aidId) {
-        window.location.href = `http://localhost:8080/api/aids/${aidId}`;
+        window.location.href = `http://localhost:8080/api/bakery/${aidId}`;
     }
     function applyFilter(){
             const search_val = document.getElementById("search_input").value;

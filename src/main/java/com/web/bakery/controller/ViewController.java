@@ -27,7 +27,7 @@ public class ViewController {
     {
         return "profile";
     }
-    @GetMapping("/aids")
+    @GetMapping("/bakery")
     public String aidPage()
     {
         return "bakery_page";

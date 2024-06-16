@@ -5,7 +5,7 @@ const id = urlParams.get('id');
 // Функция для отправки запроса к API и отображения данных о медикаменте
 async function getAidDetails() {
     try {
-        const response = await fetch(`http://localhost:8080/api/aids/${id}`);
+        const response = await fetch(`http://localhost:8080/api/bakery/${id}`);
         const data = await response.json();
 
         // Отображаем данные о медикаменте на странице
@@ -23,7 +23,7 @@ async function getAidDetails() {
                     src="https://cdn.lordicon.com/ulnswmkk.json"
                     trigger="click"
                     state="morph-heart"
-                    colors="primary:#1b8f21"
+                    colors="primary:#bb0f0f"
                     style="width:40px;height:40px;padding-top: 12px;">
                 </lord-icon>
         `;
