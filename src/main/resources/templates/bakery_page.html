@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товар</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/catalog.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <script th:src="@{/js/bakery_page.js}" type="text/javascript"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script th:src="@{/js/header.js}" type="text/javascript"></script>
+</head>
+<body>
+<div class="header">Bagetti
+    <div class="container" id="header">
+        <a href="index" style="margin: 0px 10px;">Главная</a>
+        <a href="catalog" style="margin: 0px 10px;">Каталог</a>
+        <a href="#" style="margin: 0px 10px;">О нас</a>
+        <a href="#" style="margin: 0px 10px;">Контакты</a>
+        <a href="auth" style="margin: 0px 10px;">Регистрация / Вход</a>
+    </div>
+</div>
+
+<main class="catalog">
+    <div class="medicine-details">
+        <div class="medicine-image">
+            <img src="https://via.placeholder.com/500x500" alt="Выпечка" id="aid_image">
+        </div>
+        <div class="medicine-info">
+            <h2 class="medicine-name" id="medicine-name">Название выпечки</h2>
+            <p class="manufacturer">Тип: <span id="manufacturer">Тип выпечки</span></p>
+            <p class="description">Состав: <span id="description">Состав</span></p>
+            <p class="price2">Цена: <span id="old_price" class="price-old"></span><span id="price" class="price2">100 руб.</span></p>
+            <div class="cart-item-controls" style="display: inline;">
+                <input style="width: 20%; height: 40px;" type="number" value="1" min="1" id="quantity">
+            </div>
+            <div id="add-to-cart" style="display: inline-block;">
+                <button class="add-to-cart-button" onclick="">Добавить в корзину</button>
+                <lord-icon
+                src="https://cdn.lordicon.com/ulnswmkk.json"
+                trigger="click"
+                state="morph-heart"
+                colors="primary:#bb0f0f"
+                style="width:40px;height:40px;padding-top: 12px;">
+                </lord-icon>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <h2 class="partner-title">Наши партнёры:</h2>
+        <div class="partner-logos">
+            <img src="https://optim.tildacdn.com/tild6230-6638-4537-a433-323538393233/-/resize/784x/-/format/webp/photo.png" alt="Партнёр 1">
+            <img src="https://w7.pngwing.com/pngs/285/866/png-transparent-wheat-bakery-bread-logo.png" alt="Партнёр 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBrsWBcuCfiTbm5FCw-YiBO1f9UrTcWLNpNg&s" alt="Партнёр 3">
+        </div>
+    </div>
+</footer>
+</body>
+</html>

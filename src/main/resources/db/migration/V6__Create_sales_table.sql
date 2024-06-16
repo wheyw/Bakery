@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS sales (
+    id SERIAL PRIMARY KEY,
+    bakery_id INT NOT NULL,
+    SALE_PERCENT INT NOT NULL DEFAULT 10,
+    valid_until TIMESTAMP
+);

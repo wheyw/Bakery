@@ -1,0 +1,511 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Nova Square", sans-serif;
+    background-color: #fae7c8;
+}
+
+.logo {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+.main {
+    display: flex;
+    align-items:flex-start;
+}
+.catalog {
+    display: flex;
+    flex-grow: 1; /* ����������� �� ����� �������� */
+}
+
+.catalog-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #000000;
+}
+
+.medicine-list {
+    display: flex;
+    flex-direction: row; /* Элементы располагаются в строку */
+    flex-wrap: wrap; /* Элементы переносятся на новую строку при необходимости */
+    gap: 20px; /* Отступы между элементами */
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.medicine-main{
+    width: auto;
+    min-width: 85%;
+}
+
+.medicine-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Создает плитку с колонками шириной не менее 200px */
+    gap: 20px; /* Расстояние между карточками */
+}
+
+.medicine {
+    max-width: 190px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.medicine:last-child {
+    margin-right: 0;
+}
+
+.medicine:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+}
+/* ����� ��� ������ ��������� */
+.medicine-list::-webkit-scrollbar {
+    width: 120px; /* ������ ������ ��������� */
+    height: 25px;
+}
+
+/* ����� ��� ����� ��������� */
+.medicine-list::-webkit-scrollbar-track {
+    background: transparent; /* ���� ����� */
+}
+
+/* ����� ��� �������� ��������� */
+.medicine-list::-webkit-scrollbar-thumb {
+    background: #ffffff; /* ���� �������� */
+    border-radius: 5px; /* ���������� ����� �������� */
+}
+
+/* ����� ��� �������� ��� ��������� */
+.medicine-list::-webkit-scrollbar-thumb:hover {
+    background: #ffba00; /* ���� �������� ��� ��������� */
+}
+
+.medicine img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15%;
+    margin-bottom: 20px;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%; /* ������ ���� ������ */
+    margin: 0 auto; /* ������������� */
+    padding: 20px;
+}
+.search-container-sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* ������ ���� ������ */
+    margin: 0 auto; /* ������������� */
+    padding: 20px;
+}
+
+.search-container input {
+    flex: 1; /* ����������� ���� �� ��� ��������� ������ */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffba00;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f8b903;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.search-container button:hover {
+    background-color: #ffba00;
+}
+.medicine-buy {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #f8b903;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.medicine-buy:hover {
+    background-color: #ffba00;
+}
+/* ����� ��� ������� ������ */
+.sidebar {
+    width: 15%;
+    min-width: 200px;
+    background-color: #fae7c8;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    left: 0;
+    margin-top: -80px;
+    position: relative;
+}
+
+/* ����� ��� �������� */
+.filter {
+    margin-bottom: 20px;
+}
+
+.filter label {
+    font-weight: bold;
+}
+
+.filter input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.filter button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fffa00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter button:hover {
+    background-color: #f7ff00;
+}
+.filter a {
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #f8b903;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.filter a:hover {
+    background-color: #ffcf3e;
+}
+.price {
+    font-size: 18px; /* ������ ������ */
+    color: #ffba00; /* ���� ������ */
+    font-weight: bold; /* ������ ����� */
+}
+.price-old {
+    display: inline-block;
+    font-size: 18px; /* Размер шрифта */
+    color: gray; /* Серый цвет текста */
+    text-decoration: line-through; /* Перечеркнутый текст */
+}
+.price-sale {
+    display: inline-block;
+    font-size: 20px; /* ������ ������ */
+    color: #9c2e8e; /* ���� ������ */
+    font-weight: bold; /* ������ ����� */
+}
+.medicine-description {
+    height: 3em; /* Минимальная высота параграфа для отображения двух строк */
+    line-height: 1.5; /* Высота строки */
+}
+.medicine-name {
+    white-space: nowrap; /* Запрет переноса текста на новую строку */
+    overflow: hidden; /* Скрытие части текста, которая не помещается */
+    text-overflow: ellipsis; /* Отображение многоточия, если текст не помещается */
+}
+.pages-container {
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+.pageLink{
+    background-color: #ffec00;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+}
+.pageLink:hover{
+    background-color: #ffba00;
+}
+.medicine-details {
+    display: flex;
+    align-items: flex-start;
+    margin: 0% 5% 10% 15%;
+    width: 70%;
+}
+
+.medicine-image {
+    margin-right: 20px;
+}
+
+.medicine-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-info {
+    width: 50%;
+}
+.buy-panel{
+    margin-top: 100px;
+}
+
+.medicine-name {
+    font-size: 24px;
+    color: #000000;
+    margin-top: 0;
+}
+
+.manufacturer,
+.description,
+.price2 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 50px;
+}
+
+.manufacturer span,
+.description span,
+.price2 span {
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffba00;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.add-to-favorites-button {
+    padding: 10px 20px;
+    font-size: 25px;
+    background-color: #ffba00;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.add-to-cart-button:hover,
+.add-to-favorites-button:hover {
+    background-color: #ffba00;
+}
+.register-title {
+    text-align: left;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    color: #000000;
+}
+.login-form input {
+    display: inline;
+    margin-left: 10%;
+    height: 50px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ffba00;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.login-form-button {
+    width: 80%;
+    padding: 20px 20px;
+    margin-top: 25px;
+    margin-left: 10%;
+    font-size: 20px;
+    background-color: #f8b903;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.login-form-a {
+    margin-left: 10%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+}
+.login-form-button:hover, .nav-profile-button:hover {
+    background-color: #fde22e;
+}
+.login-form{
+    justify-content: center;
+    display: block;
+    border-radius: 30px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.1);
+    border: 3px solid #ffba00;
+    margin: 0 auto;
+}
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-controls button {
+    margin-left: 5%;
+    height: 50px;
+    width: 30%;
+    color:#fff;
+    background-color: #881313;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.cart-item-controls button:hover {
+    background-color: #4e0505;
+}
+
+.cart-item-controls input[type="number"] {
+    width: 65%;
+    padding: 10px;
+    border: 3px solid #ffba00;
+    border-radius: 15px;
+    font-size: 20px;
+}
+.logout-button {
+    width: 80%;
+    padding: 10px 10px;
+    margin-left: 10%;
+    font-size: 20px;
+    background-color: transparent;
+    color: rgb(149, 7, 7);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.logout-button:hover {
+    background-color: rgb(149, 7, 7);
+    color: #fff;
+}
+.nav-profile-button {
+    width: 30%;
+    padding: 20px 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 3%;
+    font-size: 20px;
+    background-color: #f8b903;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.search-input a{
+    margin-left: 90%;
+    display: none;
+    font-size: 20px;
+}
+.search-input:hover a{
+    margin-left: 90%;
+    display: none;
+    font-size: 20px;
+}
+.product-card {
+    display: flex;
+    margin-bottom: 20px;
+    border: 3px solid #ffba00;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.product-image {
+    width: 199px;
+    height: 200px;
+    margin: 15px;
+    text-decoration: none;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-name {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.purchase-date, .delivery-date {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #666;
+}
+.delivery-status {
+    margin: 5px 0;
+    font-size: 17px;
+    color: #ffba00;
+}
+.product-info button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 13px;
+    font-size: 15px;
+    background-color: #f8b903;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.product-info button:hover {
+    background-color: #fde22e;
+}

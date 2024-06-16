@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS accounts (
+    id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+    name VARCHAR(25) NOT NULL DEFAULT 'Пользователь',
+    email VARCHAR(255) NOT NULL UNIQUE,
+    address VARCHAR(255),
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    is_deleted BOOLEAN NOT NULL DEFAULT false
+);

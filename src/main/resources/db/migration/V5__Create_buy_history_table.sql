@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS history_item (
+    id SERIAL PRIMARY KEY,
+    user_id UUID NOT NULL,
+    bakery_id INT NOT NULL,
+    quantity INT NOT NULL DEFAULT 1,
+    price NUMERIC(10,2) NOT NULL,
+    status INTEGER NOT NULL DEFAULT 0,
+    bought_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    delivery_date TIMESTAMP
+);

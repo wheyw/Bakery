@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <script th:src="@{/js/header.js}" type="text/javascript"></script>
+</head>
+<body>
+<div class="header">Bagetti
+    <div class="container" id="header">
+        <a href="index" style="margin: 0px 10px;">Главная</a>
+        <a href="catalog" style="margin: 0px 10px;">Каталог</a>
+        <a href="about" style="margin: 0px 10px;">О нас</a>
+        <a href="auth" style="margin: 0px 10px;">Регистрация / Вход</a>
+    </div>
+</div>
+<p class="middle_text">Давайте знакомиться!</p>
+<p class="middle_subtext">Наша пекарня является лидером <br>
+    среди малых сервисов онлайн-продажи выпечки в Воронеже<br>
+    предоставляя клиентам широкий ассортимент продукции высокого качества.
+    <br><br>Наши особенности</p>
+<div class="description_panel">
+    <div class="desc_container">
+        <a>Акции</a>
+        <a>Всегда низкие цены</a>
+        <a>Бонусы для постоянных покупателей</a>
+        <a>Широкий ассортимент</a>
+        <a>Доставка до квартиры</a>
+    </div>
+</div>
+<div class="desc_panel">
+    <div class="desc_pan_container">
+        <div class="desc-panel_left">
+            <p class="desc-panel_p" style="padding-top: 25%; font-size: 25px;">Наша миссия состоит в том,<br>
+                чтобы делать выпечку доступной и вкусной для всех.
+                Мы стремимся обеспечить нашим клиентам удобство и надежность при покупке выпечки,
+                предлагая широкий выбор продукции по доступным ценам.</p><br>
+            <p class="container">
+                <a href="catalog#aids-container">Каталог</a>
+                <a href="catalog#sales-container">Спецпредложения</a>
+            </p>
+        </div>
+        <div class="desc-panel_right">
+            <p class="desc-panel_p" style="padding-top: 25%; font-size: 25px;">Пекарня была основана в 2023 году с целью предоставить клиентам
+                возможность покупать выпечку онлайн с доставкой по Воронежу.
+                С тех пор мы активно развиваемся,
+                расширяя ассортимент товаров и улучшая качество обслуживания.</p>
+            <br>
+            <p class="container">
+                <a href="auth">Регистрация</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="route-direction_pane" id="add-flat-pane">
+    <h1 class="route-direction" id="loyal">Программа лояльности</h1>
+    <p class="route-direction" style="margin-top: 20px; color: #fff;">Для незарегистрированных пользователей доступен лишь просмотр каталога нашей пекарни.<br>
+    Для того, чтобы купить выпечку необходимо создать аккаунт и указать адрес для доставки<br>
+    Для новых пользователей бонус - скидка 30% и бесплатная доставка на первый заказ!</p>
+    <p class="container" style="padding-left: 20px;">
+        <a href="auth">Создать аккаунт</a>
+    </p>
+</div>
+<div class="desc_panel" style="padding-top: 0px;">
+    <div class="desc_pan_container">
+        <div class="desc-panel_left" id="guide">
+            <p class="desc-panel_p" style="padding-top: 25px; font-size: 22px;">Как заказать?<br>
+                Для оформления заказа необходимо авторизироваться и указать адрес доставки
+                (в случае если вы не указывали его ранее), после чего добавить в корзину необходимую выпечку<br>
+                Во вкладке "Корзина" необходимо нажать на кнопку со стоимость товара, после чего подтвердить оформление.<br>
+                Посмотреть активные заказы, а также историю покупок можно во вкладе "Профиль > Покупки"</p><br>
+            <p class="container">
+                <a href="cart">Перейти в корзину</a>
+            </p>
+        </div>
+        <div class="desc-panel_right" id="delivery">
+            <p class="desc-panel_p" style="padding-top: 25px; font-size: 22px;">Условия доставки:<br>
+                Доставка осуществляется по г.Воронеж<br>
+                Время доставки зависит от расстояния до клиента и специфики заказа, обычно в диапазоне от часа до двух<br>
+                Стоимость доставки фиксирована и составляет 100 руб.,<br>исключением являются первый заказ пользователя, а также заказы, стоимость которых превышает 1000 руб.</p>
+            <br>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <h2 class="partner-title">Наши партнёры:</h2>
+        <div class="partner-logos">
+            <img src="https://optim.tildacdn.com/tild6230-6638-4537-a433-323538393233/-/resize/784x/-/format/webp/photo.png" alt="Партнёр 1">
+            <img src="https://w7.pngwing.com/pngs/285/866/png-transparent-wheat-bakery-bread-logo.png" alt="Партнёр 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBrsWBcuCfiTbm5FCw-YiBO1f9UrTcWLNpNg&s" alt="Партнёр 3">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
